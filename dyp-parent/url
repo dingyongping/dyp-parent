@@ -1,0 +1,16 @@
+http://localhost:8088/dyp-parent/marketing/jdbc/setInsertData?key=dyp&code=test_table&dbet_name=test_table&dbct_name=测试表名
+
+
+http://localhost:8088/dyp-parent/marketing/jdbc/setSelectTable?key=dyp&code=test_table
+
+
+http://localhost:8088/dyp-parent/marketing/jdbc/setInsertDataField?key=dyp&code=test_table&dbef_name=param01&dbcf_name=字段1&order_num=1
+
+
+
+
+
+
+http://localhost:8088/dyp-parent/marketing/jdbc/setCreateTableF?key=dyp&code=test_table
+
+

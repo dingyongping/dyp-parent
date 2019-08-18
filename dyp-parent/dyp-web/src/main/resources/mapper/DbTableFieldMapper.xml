@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dyp.dao.DbTableFieldMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.dyp.entity.DbTableField">
+		<id column="id" property="id" />
+		<result column="father_uuid" property="fatherUuid" />
+		<result column="db_table_id" property="dbTableId" />
+		<result column="code" property="code" />
+		<result column="dbef_name" property="dbefName" />
+		<result column="dbcf_name" property="dbcfName" />
+		<result column="dbf_type" property="dbfType" />
+		<result column="not_null" property="notNull" />
+		<result column="pk" property="pk" />
+		<result column="order_num" property="orderNum" />
+		<result column="status" property="status" />
+		<result column="remarks" property="remarks" />
+		<result column="create_user_id" property="createUserId" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, father_uuid AS fatherUuid, db_table_id AS dbTableId, code, dbef_name AS dbefName, dbcf_name AS dbcfName, dbf_type AS dbfType, not_null AS notNull, pk, order_num AS orderNum, status, remarks, create_user_id AS createUserId, create_time AS createTime, update_time AS updateTime
+    </sql>
+
+</mapper>

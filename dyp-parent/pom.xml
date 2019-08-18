@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dyp</groupId>
+    <artifactId>dyp-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>dyp-tools</module>
+        <module>dyp-entity</module>
+        <module>dyp-dao</module>
+        <module>dyp-service</module>
+        <module>dyp-serviceImpl</module>
+        <module>dyp-web</module>
+         <module>dyp-dubbo-provider</module>
+        <module>dyp-dubbo-consumer</module>
+    </modules>
+    <!-- 声明是pom 指项目里没有可执行的java代码，作用是聚合工程或传递依赖用 ！！！-->
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.0.BUILD-SNAPSHOT</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+</project>
