@@ -137,6 +137,28 @@
             <version>2.3</version>
             <scope>compile</scope>
         </dependency>
+        <!-- 工作流 -->
+        <dependency>
+            <groupId>org.activiti</groupId>
+            <artifactId>activiti-spring-boot-starter-basic</artifactId>
+            <version>6.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.0.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+            <version>2.0.0.RELEASE</version>
+        </dependency>
+
+
+
+
     </dependencies>
 
     <build>

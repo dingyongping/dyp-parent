@@ -47,7 +47,6 @@ public class UserController {
         // 具体使用
         redisTemplate.opsForList().leftPush("user:list", JSON.toJSONString(list));
         stringRedisTemplate.opsForValue().set("user:name", "张三");
-
         return list;
     }
 

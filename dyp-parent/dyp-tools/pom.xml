@@ -112,7 +112,47 @@
         <artifactId>jna-platform</artifactId>
         <version>4.5.2</version>
     </dependency>
-
+    <!-- Spring Boot Redis依赖 -->
+    <!-- 注意：1.5版本的依赖和2.0的依赖不一样，注意看哦 1.5名字里面应该没有“data”, 2.0必须是“spring-boot-starter-data-redis” -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-redis</artifactId>
+        <!-- 1.5的版本默认采用的连接池技术是jedis  2.0以上版本默认连接池是lettuce, 在这里采用jedis，所以需要排除lettuce的jar -->
+        <exclusions>
+            <exclusion>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>io.lettuce</groupId>
+                <artifactId>lettuce-core</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <!-- 添加jedis客户端 -->
+    <dependency>
+        <groupId>redis.clients</groupId>
+        <artifactId>jedis</artifactId>
+    </dependency>
+    <!--spring2.0集成redis所需common-pool2-->
+    <!-- 必须加上，jedis依赖此  -->
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-pool2</artifactId>
+        <version>2.5.0</version>
+    </dependency>
+    <!-- 将作为Redis对象序列化器 -->
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.47</version>
+    </dependency>
+    <dependency>
+        <groupId>net.minidev</groupId>
+        <artifactId>json-smart</artifactId>
+        <version>2.3</version>
+        <scope>compile</scope>
+    </dependency>
 
 </dependencies>
 
